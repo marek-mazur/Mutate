@@ -1,0 +1,4 @@
+src/mutate usr/bin/
+config/* usr/share/doc/mutate/examples/
+info/mutate.png usr/share/icons/
+info/Mutate.desktop usr/share/applications
