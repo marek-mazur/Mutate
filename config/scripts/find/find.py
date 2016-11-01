@@ -12,7 +12,7 @@ sys.setdefaultencoding('utf-8')
 #text command icon subtext
 for i in range(1, len(sys.argv)):
     try:
-        k = os.popen("find " + os.environ['HOME'] + " -name '*" + sys.argv[i] + "*' 2>/dev/null")
+        k = os.popen("find " + os.environ['HOME'] + " -iname '*" + sys.argv[i] + "*' 2>/dev/null")
     except:
         sys.exit()
     strs = k.read().splitlines()
