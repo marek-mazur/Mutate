@@ -37,6 +37,7 @@ Setting::Setting(QWidget *parent) :
             if (sects[i] == "default")
             {
                 ui->Height->setText(QString::fromStdString(cp.getValue(sects[i], "Height")));
+                ui->Layout->setText(QString::fromStdString(cp.getValue(sects[i], "Layout")));
             }
             ui->tableWidget->setItem(row_count, 0, name);
             ui->tableWidget->setItem(row_count, 1, icon);
@@ -135,6 +136,7 @@ void Setting::saveItems()
         if (ui->tableWidget->item(i, 3)->text().toStdString() == "default")
         {
             out << "Height" << '=' << ui->Height->text().toStdString() << std::endl;
+            out << "Layout" << '=' << ui->Layout->text().toStdString() << std::endl;
         }
     }
     out.close();

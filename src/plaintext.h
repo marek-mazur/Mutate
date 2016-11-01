@@ -3,14 +3,17 @@
 #include <QPlainTextEdit>
 #include <QListWidget>
 #include <QWidget>
+
 #include "returnbyscript.h"
 #include "frequenceparse.h"
 #include "singleapplication.h"
+#include "keyboard_layout.h"
 
 class PlainText : public QPlainTextEdit
 {
     Q_OBJECT
 public:
+    ~PlainText();
     QWidget *parent;
     QListWidget *listWidget;
     FrequenceParse fparse;
@@ -23,6 +26,8 @@ public:
     void setApp(SingleApplication *app);
 private:
     SingleApplication* aptr;
+    KeyboardLayout *keyboardLayout;
+    bool handleKey(Qt::Key key, Qt::KeyboardModifiers modifiers);
 };
 
 #endif // PLAINTEXT_H

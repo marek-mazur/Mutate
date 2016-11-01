@@ -32,6 +32,7 @@ SOURCES += main.cpp\
     singleapplication.cpp \
     frequenceparse.cpp \
     hotkey.cpp \
+    keyboard_layout.cpp \
     widgetthread.cpp \
     listitem.cpp \
     config.cpp \
@@ -48,6 +49,7 @@ HEADERS  += widget.h \
     hotkey.h \
     plaintext.h \
     listwidget.h \
+    keyboard_layout.h \
     singleapplication.h \
     frequenceparse.h \
     widgetthread.h \
