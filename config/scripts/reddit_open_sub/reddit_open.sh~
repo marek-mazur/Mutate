@@ -1,0 +1,5 @@
+#!/bin/bash
+echo [$@]
+echo "command=xdg-open \"https://reddit.com/$@\""
+echo "icon=reddit.png"
+echo "subtext=Open sub-reddit $@"
